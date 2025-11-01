@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* reset & make body fill screen + center form */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: auto;
+}
+
+/* background image container */
+.bg-wrap {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark overlay for contrast */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/* login box styling */
+.login-container {
+  background: #fff;
+  width: 90%;
+  max-width: 360px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 1;
+}
+
+/* business name & quote */
+.business-name {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: .5rem;
+}
+.quote {
+  font-size: .9rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.login-container h2 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* inputs */
+.login-container input {
+  width: 100%;
+  padding: .75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* button */
+.login-container button {
+  width: 100%;
+  padding: .75rem;
+  background: #4285f4;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.login-container button:hover {
+  background: #357ae8;
+}
+
+/* forgot link */
+.forgot {
+  margin-top: .5rem;
+  text-align: right;
+  font-size: .875rem;
+}
+.forgot a {
+  color: #4285f4;
+  text-decoration: none;
+}
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* small‐screen tweaks */
+@media (max-width: 400px) {
+  .login-container {
+    padding: 1.5rem 1rem;
+  }
+  .business-name { font-size: 1.2rem; }
+  .login-container h2 { font-size: 1.1rem; }
+}

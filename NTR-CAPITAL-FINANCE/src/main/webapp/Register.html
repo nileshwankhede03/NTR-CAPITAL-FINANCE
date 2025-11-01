@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register – NTR – CAPITAL FINANCE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Register.css">
+  <link rel="icon" type="image/x-icon" href="images/logoNTR.ico">
+</head>
+<body>
+
+  <!-- Fullscreen background image -->
+  <div class="bg-wrap">
+    <img src="images/registerpage.jpg" alt="Background" class="bg-img">
+  </div>
+  <div class="overlay"></div>
+
+  <!-- Left-side registration card -->
+  <div class="register-container">
+    <h1 class="business-name">NTR – CAPITAL FINANCE</h1>
+    <p class="quote">“Empowering your future, one step at a time.”</p>
+    <h2>Create Account</h2>
+    <form action="register" method="POST" autocomplete="on">
+      
+      <label for="fullname">Full Name</label>
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        required
+        minlength="3"
+        maxlength="100"
+        placeholder="Enter your full name"
+      >
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Enter your email address"
+      >
+
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+        placeholder="Create a strong password"
+      >
+
+      <label for="confirm_password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm_password"
+        name="confirm_password"
+        required
+        minlength="8"
+        placeholder="Re-enter your password"
+      >
+      
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        pattern="[0-9]{10,15}"
+        placeholder="Enter your phone number"
+      >
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+</body>
+</html>

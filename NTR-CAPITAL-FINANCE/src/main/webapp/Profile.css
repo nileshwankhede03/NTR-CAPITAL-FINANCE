@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* base reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: Arial, sans-serif; }
+
+/* background */
+.bg-wrap { position: fixed; inset:0; z-index:-2; overflow:hidden; }
+.bg-img { width:100%;height:100%;object-fit:cover; }
+.overlay { position: fixed; inset:0; background:rgba(0,0,0,0.5); z-index:-1; }
+
+/* layout */
+.profile-container {
+  display: flex;
+  min-height: 100%;
+  position: relative;
+  z-index:1;
+}
+
+/* sidebar */
+.sidebar {
+  width: 240px;
+  padding: 2rem 1rem;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+}
+.sidebar .avatar {
+  width: 80px; height: 80px;
+  border-radius: 50%; margin: 0 auto 1rem; display: block;
+}
+.sidebar h2, .sidebar p { text-align: center; color:#333; }
+.sidebar nav { margin-top: 2rem; display:flex; flex-direction:column; }
+.sidebar nav a {
+  padding: .5rem 1rem; color:#333; text-decoration:none;
+  margin-bottom:.5rem; border-radius:4px;
+}
+.sidebar nav a:hover { background:#f0f0f0; }
+.sidebar nav .logout { color:#d33; }
+
+/* main content */
+.main-content {
+  flex:1; padding:2rem; overflow-y:auto; background: rgba(255,255,255,0.9);
+}
+.main-content section { margin-bottom:2rem; }
+.main-content h3 { margin-bottom:1rem; color:#444; }
+
+/* summary cards */
+.cards {
+  display:flex; gap:1rem;
+  flex-wrap: wrap;
+}
+.card {
+  flex:1; min-width:120px;
+  background:#fff; padding:1rem; border-radius:4px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.1);
+}
+.card h4 { font-size:.9rem; color:#666; }
+.card p { font-size:1.3rem; color:#333; }
+
+/* details list */
+dl { display:grid; grid-template-columns: max-content auto; row-gap:.5rem; column-gap:1rem; }
+dt { font-weight:bold; color:#555; }
+dd { color:#333; }
+
+/* activity */
+.activity-list { list-style:none; }
+.activity-list li { padding:.5rem 0; border-bottom:1px solid #eee; display:flex; justify-content:space-between; color:#333; }
+.view-all { display:inline-block; margin-top:.5rem; color:#4285f4; text-decoration:none; }
+.view-all:hover { text-decoration:underline; }
+
+/* settings buttons */
+.btn {
+  display:inline-block; margin:.25rem .5rem .25rem 0;
+  padding:.5rem 1rem; background:#4285f4; color:#fff;
+  border:none; border-radius:4px; cursor:pointer;
+}
+.btn:hover { background:#357ae8; }
+
+/* responsive */
+@media (max-width: 800px) {
+  .profile-container { flex-direction:column; }
+  .sidebar { width:100%; display:flex; align-items:center; flex-direction:column; }
+  .sidebar nav { align-items:center; }
+  .main-content { background:rgba(255,255,255,1); }
+}
